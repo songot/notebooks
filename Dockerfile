@@ -16,5 +16,5 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 USER ${USER}
 
-FROM songot/notebooks
+FROM https://github.com/songot/notebooks
 COPY . ${HOME}
