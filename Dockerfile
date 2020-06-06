@@ -3,10 +3,11 @@ FROM python:3.7-slim
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook
     
-FROM ubuntu:18.10
-RUN apt-get update && apt-get install -y --no-install-recommends git && \ 
-    git clone https://github.com/songot/notebooks && \ 
-    cd notebooks
+FROM ubuntu:18.04
+RUN apt-get update && apt-get install -y --no-install-recommends git 
+#&& \ 
+    #git clone https://github.com/songot/notebooks && \ 
+    #cd notebooks
 
 # create user with a home directory
 ARG NB_USER
