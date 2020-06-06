@@ -16,6 +16,7 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 USER ${USER}
 
+FROM ubuntu:18.04
 RUN apt-get update && apt-get install && \ 
     git clone https://github.com/songot/notebooks && \ 
     cd notebooks
