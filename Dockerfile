@@ -4,7 +4,7 @@ RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook
     
 FROM ubuntu:18.10
-RUN apt-get update && apt-get install git && \ 
+RUN apt-get update && apt-get install -y --no-install-recommends git && \ 
     git clone https://github.com/songot/notebooks && \ 
     cd notebooks
 
