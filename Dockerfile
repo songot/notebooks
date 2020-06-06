@@ -2,6 +2,11 @@ FROM python:3.7-slim
 # install the notebook package
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook
+    
+FROM ubuntu:18.10
+RUN apt-get update && apt-get install git && \ 
+    git clone https://github.com/songot/notebooks && \ 
+    cd notebooks
 
 # create user with a home directory
 ARG NB_USER
@@ -15,8 +20,3 @@ RUN adduser --disabled-password \
     ${NB_USER}
 WORKDIR ${HOME}
 USER ${USER}
-
-FROM ubuntu:18.04
-RUN apt-get update && apt-get install && \ 
-    git clone https://github.com/songot/notebooks && \ 
-    cd notebooks
