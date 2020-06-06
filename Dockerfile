@@ -16,5 +16,4 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 USER ${USER}
 
-FROM https://github.com/songot/notebooks
-COPY . ${HOME}
+RUN git clone https://github.com/songot/notebooks && cd notebooks
