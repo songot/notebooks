@@ -16,4 +16,5 @@ RUN adduser --disabled-password \
 WORKDIR ${HOME}
 USER ${USER}
 
-COPY --chown=songot:notebooks . ${HOME}
+FROM songot/notebooks
+COPY . ${HOME}
