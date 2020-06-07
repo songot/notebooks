@@ -4,4 +4,4 @@
 
 #!/usr/bin/env bash
 
-export PATH="$PATH:home\jovyan\chromedriver.exe"
+export PATH="$PATH:home/jovyan/chromedriver.exe"
